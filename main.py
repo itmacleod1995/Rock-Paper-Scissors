@@ -1,5 +1,18 @@
 import random
 
+def chooseWinner(playerChoice, computerChoice):
+    """Method to decide the winner"""
+    if playerChoice == "0" and computerChoice == 2:
+        print("Player wins!")
+    elif playerChoice == "1" and computerChoice == 0:
+        print("Player wins!")
+    elif playerChoice == "2" and computerChoice == 1:
+        print("Player wins!")
+    elif int(playerChoice) == computerChoice:
+        print("Draw!")
+    else:
+        print("Computer wins")
+
 game = True
 while game:
     computerChoices = [0, 1, 2]
@@ -69,3 +82,5 @@ while game:
               (____)
         ---.__(___)
         """)
+
+    chooseWinner(playerChoice=choice, computerChoice=computerChoice)
